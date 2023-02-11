@@ -47,8 +47,8 @@ Widget.prototype = {
 };
 
 Widget.defaultProps = {
-  rasaServerUrl: "http://localhost:5005/webhooks/rest/webhook",
-  userId: "jitesh97",
+  rasaServerUrl: "https://2c54f7cd-1830-4062-9ab2-2dd98c299f98.mock.pstmn.io",
+  userId: "ani",
   initialPayload: "/greet",
   metadata: {},
   botAvatar:
@@ -56,8 +56,8 @@ Widget.defaultProps = {
   widgetColor: "#a78bfa",
   textColor: "#4c1d95",
   userMsgBackgroundColor: "#e1d7ff",
-  botTitle: "",
-  botSubTitle: "Sales & Services Assistant",
+  botTitle: "Aari Bot",
+  botSubTitle: "You friendly neighborhood Chatbot",
   botMsgBackgroundColor: "#f3f4f6",
   botResponseDelay: "",
   chatHeaderCss: {
