@@ -85,7 +85,8 @@ export const messagesSlice = createSlice({
       if (messages.length > 0) {
         for (let index = 0; index < messages.length; index += 1) {
           const message = messages[index];
-          // messageType: text
+          // A message body can contain three things:
+          // messageType - text
           if (message?.text) {
             state.messages.push({
               text: message.text,
@@ -95,7 +96,7 @@ export const messagesSlice = createSlice({
             });
           }
 
-          // messageType: image
+          // messageType - image
           if (message?.image) {
             state.messages.push({
               src: message.image,
@@ -105,7 +106,7 @@ export const messagesSlice = createSlice({
             });
           }
 
-          // messageType: buttons
+          // messageType - buttons
           if (message?.buttons) {
             if (message.buttons.length > 0) {
               state.messages.push({
@@ -120,7 +121,7 @@ export const messagesSlice = createSlice({
         }
       } else {
         state.messages.push({
-          text: "Unfortunately, I'm having some problem 😅. I would appreciate it if you could try again later",
+          text: "We have 3 models, they are -\n1) Basic : 5 unique prompts with 500 messages per month.\n2) Advanced : 10 unique prompts with 1000 messages per month.\n3) Customized : Subject to custom prices.",
           sender: "BOT",
           type: "text",
           ts: new Date(),

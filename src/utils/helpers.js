@@ -10,7 +10,7 @@ export const createUserMessage = (message) => {
 };
 
 export const getBotResponse = async ({
-  rasaServerUrl,
+  serverUrl,
   sender,
   message,
   metadata = {},
@@ -18,7 +18,7 @@ export const getBotResponse = async ({
   try {
     const response = await axios({
       method: "post",
-      url: rasaServerUrl,
+      url: serverUrl,
       data: {
         sender,
         message,

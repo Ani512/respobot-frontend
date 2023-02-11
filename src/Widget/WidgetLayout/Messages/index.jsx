@@ -38,7 +38,7 @@ export const Messages = () => {
   const dispatch = useDispatch();
   const appContext = useContext(AppContext);
 
-  const { widgetColor, initialPayload, rasaServerUrl, userId } = appContext;
+  const { widgetColor, initialPayload, serverUrl, userId } = appContext;
   const { messages, userGreeted } = useSelector((state) => state.messageState);
   const bottomRef = useScrollBottom(messages);
   useEffect(() => {
@@ -49,7 +49,7 @@ export const Messages = () => {
       dispatch(toggleUserTyping(false));
       dispatch(
         fetchBotResponse({
-          rasaServerUrl,
+          serverUrl,
           message: initialPayload,
           sender: userId,
         })
@@ -59,7 +59,7 @@ export const Messages = () => {
     dispatch,
     initialPayload,
     messages.length,
-    rasaServerUrl,
+    serverUrl,
     userGreeted,
     userId,
   ]);

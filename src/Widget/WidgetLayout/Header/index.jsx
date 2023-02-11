@@ -35,7 +35,7 @@ export const Header = () => {
     botTitle,
     botAvatar,
     chatHeaderCss,
-    rasaServerUrl,
+    serverUrl,
     userId,
     metadata,
   } = appContext;
@@ -63,7 +63,7 @@ export const Header = () => {
     setShowDropdown(!showDropdown);
     dispatch(
       resetBot({
-        rasaServerUrl,
+        serverUrl,
         message: "/restart",
         sender: userId,
         metadata,

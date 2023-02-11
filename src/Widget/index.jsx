@@ -16,7 +16,7 @@ export const Widget = (props) => {
 };
 
 Widget.prototype = {
-  rasaServerUrl: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  serverUrl: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   initialPayload: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   userId: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   metadata: PropTypes.oneOfType([PropTypes.object, PropTypes.element]),
@@ -47,7 +47,7 @@ Widget.prototype = {
 };
 
 Widget.defaultProps = {
-  rasaServerUrl: "https://2c54f7cd-1830-4062-9ab2-2dd98c299f98.mock.pstmn.io",
+  serverUrl: "replaceWithBackendUrl",
   userId: "ani",
   initialPayload: "/greet",
   metadata: {},
@@ -56,7 +56,7 @@ Widget.defaultProps = {
   widgetColor: "#a78bfa",
   textColor: "#4c1d95",
   userMsgBackgroundColor: "#e1d7ff",
-  botTitle: "Aari Bot",
+  botTitle: "Respo Bot",
   botSubTitle: "You friendly neighborhood Chatbot",
   botMsgBackgroundColor: "#f3f4f6",
   botResponseDelay: "",

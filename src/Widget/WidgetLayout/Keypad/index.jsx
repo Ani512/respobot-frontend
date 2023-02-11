@@ -28,7 +28,7 @@ export const Keypad = () => {
   );
 
   const userTyping = useSelector((state) => state.messageState.userTyping);
-  const {  rasaServerUrl, userId, textColor } = theme;
+  const {  serverUrl, userId, textColor } = theme;
 
   const handleSubmit = async () => {
     if (userInput.length > 0) {
@@ -38,7 +38,7 @@ export const Keypad = () => {
       dispatch(toggleBotTyping(true));
       dispatch(
         fetchBotResponse({
-          rasaServerUrl,
+          serverUrl,
           message: userInput.trim(),
           sender: userId,
         })
